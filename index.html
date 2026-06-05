@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogo de Lógica: Caminhos e Sequências</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Jogo de lógica com labirinto e sequência de objetos">
+      <header class="top-panel">
+        <div>
+          <p class="eyebrow">Caixa de Referência</p>
+          <h1>Leve o personagem pela sequência correta</h1>
+        </div>
+        <div id="levelBadge" class="level-badge" aria-live="polite">Nível 1/15</div>
+      </header>
+
+      <section class="reference-card" aria-label="Sequência alvo">
+        <ol id="referenceList" class="reference-list"></ol>
+      </section>
+
+      <section class="game-panel" aria-label="Área do labirinto">
+        <canvas id="gameCanvas" width="960" height="560" aria-label="Labirinto interativo"></canvas>
+        <div id="message" class="message" aria-live="polite">Arraste o personagem pelo caminho.</div>
+      </section>
+
+      <footer class="house-row" aria-label="Casas finais em ordem fixa">
+        <div class="house house-green" data-house="green">Casa Verde</div>
+        <div class="house house-yellow" data-house="yellow">Casa Amarela</div>
+        <div class="house house-blue" data-house="blue">Casa Azul</div>
+        <div class="house house-red" data-house="red">Casa Vermelha</div>
+      </footer>
+
+      <nav class="controls" aria-label="Controles do jogo">
+        <button id="prevLevel" type="button">Nível anterior</button>
+        <button id="restartLevel" type="button">Recomeçar</button>
+        <button id="nextLevel" type="button">Próximo nível</button>
+      </nav>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
